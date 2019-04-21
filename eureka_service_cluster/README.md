@@ -20,7 +20,7 @@
 
     spring:
       application:
-        name: eureka_service_cluster
+        name: eureka-service-cluster
       profiles:
         active: peer1
     ---

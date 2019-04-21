@@ -23,7 +23,7 @@
     
     spring:
       application:
-        name: eureka_service
+        name: eureka-service
         
 register-with-eureka: false和fetch-registry: false防止自己注册自己
 
