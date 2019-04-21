@@ -91,3 +91,15 @@ defaultZone不能写成default-zone
     访问http://localhost:8768/actuator/hystrix.stream可以看到熔断监控数据
     
     访问http://localhost:8768/hystrix输入http://localhost:8768/actuator/hystrix.stream查看监控仪表 未产生数据为loading...
+    
+spring boot 2.0后访问额路径为actuator/hystrix.stream 也可通过配置形式直接访问/hystrix.stream
+
+    @Bean
+    public ServletRegistrationBean getServlet() {
+        HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();
+        ServletRegistrationBean registrationBean = new ServletRegistrationBean<>(streamServlet);
+        registrationBean.setLoadOnStartup(1);
+        registrationBean.addUrlMappings("/hystrix.stream");
+        registrationBean.setName("HystrixMetricsStreamServlet");
+        return registrationBean;
+    }
