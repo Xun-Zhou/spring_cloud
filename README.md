@@ -16,4 +16,6 @@ spring cloud: Greenwich.SR1
 
 - [eureka ribbon客户端 eureka client ribbon](https://github.com/Xun-Zhou/spring_cloud/tree/master/eureka_client_ribbon)
 
+- [eureka feign客户端 eureka client feign](https://github.com/Xun-Zhou/spring_cloud/tree/master/eureka_client_feign)
+
 将项目导入idea时，idea无法识别maven module，打开右边maven栏，点击+号添加各个module的pom.xml文件
