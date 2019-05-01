@@ -1,0 +1,51 @@
+server:
+  port: 8770
+spring:
+  application:
+    name: zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+zuul:
+  routes:
+    hello:
+      path: /hello/**
+      serviceId: eureka-client
+  retryable: true
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000
+
+ribbon:
+  ConnectTimeout: 1000
+  ReadTimeout: 1000
+  MaxAutoRetries: 1
+  MaxAutoRetriesNextServer: 1
+  OkToRetryOnAllOperations: true
+
+#直接使用url
+#zuul:
+#  routes:
+#    helloUrl:
+#      path: /helloUrl/**
+#      url: http://localhost:8764
+
+#不使用eureka配置 自定义服务
+#zuul:
+#  routes:
+#    hello:
+#      path: /hello/**
+#      serviceId: hello
+#  prefix: /api
+#ribbon:
+#  eureka:
+#    enabled: false
+#hello:
+#  ribbon:
+#    listOfServers: http://localhost:8764
