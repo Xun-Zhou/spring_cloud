@@ -24,10 +24,12 @@ spring cloud: Greenwich.SR1
 
 - [eureka turbine客户端 eureka client turbine](https://github.com/Xun-Zhou/spring_cloud/tree/master/eureka_client_turbine)
 
-- [zuul service](https://github.com/Xun-Zhou/spring_cloud/tree/master/zuul)
+- [zuul service 网关](https://github.com/Xun-Zhou/spring_cloud/tree/master/zuul)
 
-- [spring cloud config service](https://github.com/Xun-Zhou/spring_cloud/tree/master/config_service)
+- [spring cloud config service 配置中心service](https://github.com/Xun-Zhou/spring_cloud/tree/master/config_service)
 
-- [spring cloud config client](https://github.com/Xun-Zhou/spring_cloud/tree/master/config_client)
+- [spring cloud config client 配置中心client](https://github.com/Xun-Zhou/spring_cloud/tree/master/config_client)
+
+- [spring cloud sleuth_client 调用链client](https://github.com/Xun-Zhou/spring_cloud/tree/master/sleuth_client)
 
 将项目导入idea时，idea无法识别maven module，打开右边maven栏，点击+号添加各个module的pom.xml文件
