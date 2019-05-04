@@ -32,4 +32,6 @@ spring cloud: Greenwich.SR1
 
 - [spring cloud sleuth_client 调用链client](https://github.com/Xun-Zhou/spring_cloud/tree/master/sleuth_client)
 
+- [spring cloud gateway](https://github.com/Xun-Zhou/spring_cloud/tree/master/spring_cloud_gateway)
+
 将项目导入idea时，idea无法识别maven module，打开右边maven栏，点击+号添加各个module的pom.xml文件
