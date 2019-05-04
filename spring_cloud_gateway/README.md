@@ -87,6 +87,7 @@ Spring Cloud Gateway是Spring Cloud官方推出的第二代网关框架，取代
 
 1.通过java bean方式添加
     
+    @Bean
     public RouteLocator myRoutes(RouteLocatorBuilder builder) {
         return builder.routes()
                 .route(p -> p
@@ -121,7 +122,11 @@ https://cloud.spring.io/spring-cloud-gateway/spring-cloud-gateway.html#gateway-r
 
 spring cloud gateway filter有两种类型pre(路有前执行)和post(路由后执行) 同zuul类似
 
-spring cloud gateway filter作用范围有两种gateway filter(单个路由)global gateway filer(全局路由)
+spring cloud gateway filter作用范围有两种gateway filter(单个路由) global gateway filer(全局路由) 全局路由不需要在配置文件中配置
+
+spring cloud gateway提供的global gateway filer
+
+https://cloud.spring.io/spring-cloud-gateway/spring-cloud-gateway.html#_global_filters
 
     spring:
       cloud:
@@ -187,7 +192,7 @@ getOrder排序 数字越小优先级越高
 
 ## 自定义gateway filter factory
 
-过滤器工厂可以再配置文件中使用
+过滤器工厂可以在配置文件中使用
 
 两种方式
 
@@ -328,7 +333,7 @@ getOrder排序 数字越小优先级越高
     
 ## spring cloud gateway自带限流
 
-spring cloud gateway自带限流用redis+lua脚本实现令牌桶算法
+spring cloud gateway自带限流 使用redis+lua脚本实现令牌桶算法
 
 添加依赖
 
